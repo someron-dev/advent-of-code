@@ -12,13 +12,13 @@ for game in games:
     attack = attacks.index(game[0]) + 1
     response = responses.index(game[2]) + 1
 
-    if attack == response: # Tie (3 Points + Response points)
-        print(attack, response, "Tie")
+    if attack == response: # Draw (3 Points + Response points)
+        print(attack, response, 'Draw')
         score += 3
-    elif response - attack == 1 or response - attack == -2:
-        print(attack, response, "Win")
+    elif response - attack == 1 or response - attack == -2: # Win (6 Points + Response points)
+        print(attack, response, 'Win')
         score += 6
-    else: print(attack, response, "Bruh")
+    else: print(attack, response, 'Bruh') # You Loose (Response Points)
     
     score += response
 
